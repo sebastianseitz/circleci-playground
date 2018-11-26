@@ -11,4 +11,7 @@ jobs:
       - setup_remote_docker
       - run:
           name: Build docker
-          command: docker build -f docker/Dockerfile docker/
+          command: docker build -f docker/Dockerfile docker/ -t playground
+      - run:
+          name: Run built docker
+          command: docker run playground
