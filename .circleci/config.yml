@@ -10,8 +10,5 @@ jobs:
           command: echo Hello, world.
       - setup_remote_docker
       - run:
-          name: Build docker
-          command: docker build -f docker/Dockerfile docker/ -t playground
-      - run:
-          name: Run built docker
-          command: docker run playground
+          name: Docker compose
+          command: docker-compose up docker/docker-compose.yml
