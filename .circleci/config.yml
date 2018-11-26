@@ -8,6 +8,7 @@ jobs:
       - run:
           name: Greeting
           command: echo Hello, world.
+      - setup_remote_docker
       - run:
           name: Build docker
           command: docker build -f docker/Dockerfile docker/
