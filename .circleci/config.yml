@@ -11,4 +11,10 @@ jobs:
       - setup_remote_docker
       - run:
           name: Docker compose
-          command: docker-compose -f docker/docker-compose.yml up
+          command: docker-compose -f docker/docker-compose.yml up --no-start
+      - run:
+          name: Docker compose `start`
+          command: docker-compose -f docker/docker-command.yml start
+      - run:
+          name: Docker compose `stop`
+          command: docker-compose -f docker/docker-command.yml stop
