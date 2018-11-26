@@ -10,6 +10,9 @@ jobs:
           command: echo Hello, world.
       - setup_remote_docker
       - run:
+          name: Build docker image
+          command: docker build -f docker/Dockerfile docker/ -t playground
+      - run:
           name: Docker compose
           command: docker-compose -f docker/docker-compose.yml up --no-start
       - run:
