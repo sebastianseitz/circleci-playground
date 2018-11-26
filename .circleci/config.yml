@@ -10,4 +10,4 @@ jobs:
           command: echo Hello, world.
       - run:
           name: Build docker
-          command: docker build -f docker/Dockerfile
+          command: docker build -f docker/Dockerfile docker/
